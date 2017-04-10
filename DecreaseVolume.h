@@ -8,6 +8,7 @@ class DecreaseVolume : public Volume
 public:
 	DecreaseVolume();
 
+	void newVolume();
 	void updateVolume();
 };
 

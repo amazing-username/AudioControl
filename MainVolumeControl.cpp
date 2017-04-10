@@ -14,15 +14,13 @@ int main(int argc, char* argv[])
 	if (action.compare("up") == 0)
 	{
 		IncreaseVolume iv;
-		//iv.setVolume(30);
 
-		std::cout << "Volume test: " << iv.getVolume() << std::endl;
+		//std::cout << "Volume test: " << iv.getVolume() << std::endl;
 	}
 	else if (action.compare("down") == 0)
 	{
 		DecreaseVolume dv;
-		//dv.setVolume(70);
-		std::cout << "Volume test: " << dv.getVolume() << std::endl;
+		//std::cout << "Volume test: " << dv.getVolume() << std::endl;
 	}
 	else
 	{

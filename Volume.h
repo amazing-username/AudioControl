@@ -22,6 +22,7 @@ public:
 	}
 	void updateTheCurrentVolume();
 	virtual void updateVolume() = 0;
+	virtual void newVolume() = 0;
 
 protected:
 

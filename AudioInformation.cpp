@@ -4,9 +4,12 @@
 #include <string>
 
 #include"AudioInformation.h"
+#include"AudioDump.h"
 
 AudioInformation::AudioInformation()
 {
+	AudioDump ad;
+	ad.dump();
 	stripInformation();
 }
 
@@ -15,7 +18,6 @@ void AudioInformation::stripInformation()
 {
 	std::fstream readAudio;
 	readAudio.open("audio.txt", std::ios::in);
-	//std::cout << "In here" << std::endl;
 	
 	while (!readAudio.eof())
 	{
@@ -30,12 +32,10 @@ void AudioInformation::stripInformation()
 		if (count == 3)
 		{
 			readAudio >> data;
-			std::cout << data << " volume" << std::endl;
 			volume = atoi(data.c_str());
 			break;
 		}
 	}
-	//std::cout << std::endl;
 
 	readAudio.close();
 	readAudio.open("currentVolume.txt", std::ios::out);

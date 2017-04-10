@@ -26,7 +26,9 @@ public:
 
 protected:
 
-	unsigned short volume;
+	short volume;
+	unsigned short playBackOrigin = 0;
+	unsigned short playBackEnd = 127;
 	const unsigned short AFFECTAMOUNT = 20;
 
 private:	

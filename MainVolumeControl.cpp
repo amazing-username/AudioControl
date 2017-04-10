@@ -1,8 +1,4 @@
 #include<iostream>
-#include<string>
-
-#include"stdio.h"
-#include"stdlib.h"
 
 #include"IncreaseVolume.h"
 #include"DecreaseVolume.h"
@@ -15,16 +11,14 @@ int main(int argc, char* argv[])
 	{
 		IncreaseVolume iv;
 
-		//std::cout << "Volume test: " << iv.getVolume() << std::endl;
 	}
 	else if (action.compare("down") == 0)
 	{
 		DecreaseVolume dv;
-		//std::cout << "Volume test: " << dv.getVolume() << std::endl;
 	}
 	else
 	{
-		std::cout << "Not the same" << std::endl;
+		std::cout << "Choose correct action, up or down" << std::endl;
 	}
 
 	return 0;

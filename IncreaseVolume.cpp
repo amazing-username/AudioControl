@@ -18,7 +18,14 @@ IncreaseVolume::IncreaseVolume()
 
 void IncreaseVolume::newVolume()
 {
-	volume = volume + AFFECTAMOUNT;
+	if ((volume + AFFECTAMOUNT) < playBackEnd)
+	{
+		volume = volume + AFFECTAMOUNT;	
+	}
+	else
+	{
+		volume = playBackEnd;
+	}
 }
 void IncreaseVolume::updateVolume()
 {

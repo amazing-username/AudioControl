@@ -14,7 +14,7 @@ public:
 
 	void dump()
 	{
-		system("amixer -c 1 get DAC0 > audio.txt");
+		system("amixer -c 1 get Master > audio.txt");
 	}
 
 };

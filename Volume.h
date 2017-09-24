@@ -29,7 +29,7 @@ protected:
 	short volume;
 	unsigned short playBackOrigin = 0;
 	unsigned short playBackEnd = 127;
-	const unsigned short AFFECTAMOUNT = 20;
+	const unsigned short AFFECTAMOUNT = 13;
 
 private:	
 };

@@ -29,7 +29,7 @@ void DecreaseVolume::newVolume()
 }
 void DecreaseVolume::updateVolume()
 {
-	std::string command = "amixer -c 1 set DAC0 ";
+	std::string command = "amixer -c 1 set Master ";
 	command.append(std::to_string(volume));
 	system(command.c_str());
 }

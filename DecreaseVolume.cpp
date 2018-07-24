@@ -19,13 +19,9 @@ DecreaseVolume::DecreaseVolume()
 void DecreaseVolume::newVolume()
 {
 	if ((volume - AFFECTAMOUNT) > playBackOrigin)
-	{
 		volume = volume - AFFECTAMOUNT;		
-	}
 	else
-	{
 		volume = 0;	
-	}
 }
 void DecreaseVolume::updateVolume()
 {

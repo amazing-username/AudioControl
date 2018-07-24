@@ -8,7 +8,7 @@ void Volume::updateTheCurrentVolume()
 {
 	std::fstream updateFile;
 
-	updateFile.open("currentVolume.txt", std::ios::out);
+	updateFile.open(curVolumePath, std::ios::out);
 
 	updateFile << volume;
 

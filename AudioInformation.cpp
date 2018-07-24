@@ -17,18 +17,15 @@ AudioInformation::AudioInformation()
 void AudioInformation::stripInformation()
 {
 	std::fstream readAudio;
-	readAudio.open("audio.txt", std::ios::in);
+	readAudio.open(audioInfoPath, std::ios::in);
 	
 	while (!readAudio.eof())
 	{
 		std::string data;
 		readAudio >> data;
 
-
 		if (data.compare("Playback") == 0)
-		{
 			++count;
-		}
 		if (count == 3)
 		{
 			readAudio >> data;
@@ -36,7 +33,6 @@ void AudioInformation::stripInformation()
 			break;
 		}
 	}
-
 	readAudio.close();
 	readAudio.open("currentVolume.txt", std::ios::out);
 
@@ -46,7 +42,4 @@ void AudioInformation::stripInformation()
 }
 
 
-unsigned short AudioInformation::getVolume() const
-{
-	return volume;
-}
+unsigned short AudioInformation::getVolume() const { return volume; }

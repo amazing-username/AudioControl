@@ -10,7 +10,5 @@ public:
 
 	void newVolume();
 	void updateVolume();
-
 };
-
 #endif

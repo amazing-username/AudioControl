@@ -3,6 +3,8 @@
 
 #include<string>
 
+using std::string;
+
 class AudioInformation
 {
 public:
@@ -10,10 +12,13 @@ public:
 
 	unsigned short getVolume() const;
 
+	
+	static string audioConfigPath;
 private:
 	void stripInformation();
 	
-	std::string audioInfoPath{"/usr/lib/AudioControl/audio.txt"};
+	string audioInfoPath;
+	string currentVolumnPath;
 	unsigned short volume = 0;
 	unsigned short count = 0;
 	const unsigned short MAXCOUNTS = 3;

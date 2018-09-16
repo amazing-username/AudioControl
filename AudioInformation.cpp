@@ -6,6 +6,8 @@
 #include"AudioInformation.h"
 #include"AudioDump.h"
 
+string AudioInformation::audioConfigPath = "/usr/lib/AudioControl/";
+
 AudioInformation::AudioInformation()
 {
 	AudioDump ad;
@@ -17,6 +19,7 @@ AudioInformation::AudioInformation()
 void AudioInformation::stripInformation()
 {
 	std::fstream readAudio;
+	audioInfoPath.assign(audioConfigPath + "audio.txt");
 	readAudio.open(audioInfoPath, std::ios::in);
 	
 	while (!readAudio.eof())
@@ -34,7 +37,8 @@ void AudioInformation::stripInformation()
 		}
 	}
 	readAudio.close();
-	readAudio.open("currentVolume.txt", std::ios::out);
+	currentVolumnPath = audioConfigPath + "currentVolume.txt";
+	readAudio.open(currentVolumnPath, std::ios::out);
 
 	readAudio << volume;
 
